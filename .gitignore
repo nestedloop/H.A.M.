@@ -42,7 +42,10 @@ local.properties
 *.sln.docstates
 *.exe
 Debug/
-
+bin/Debug/
+bin/Release/
+*.vshost.exe
+*.vshost.exe.manifest
 # Build results
 [Dd]ebug/
 [Rr]elease/
