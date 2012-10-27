@@ -6,5 +6,3 @@ C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\bin\Debug\Ham
 C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.exe
 C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.pdb
 C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.AboutBox1.resources
-C:\Users\Ionut\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.exe
-C:\Users\Ionut\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.pdb
