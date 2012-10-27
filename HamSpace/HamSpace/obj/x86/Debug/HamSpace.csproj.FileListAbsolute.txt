@@ -1,0 +1,8 @@
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.MainPage.resources
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.Properties.Resources.resources
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.csproj.GenerateResource.Cache
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\bin\Debug\HamSpace.exe
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\bin\Debug\HamSpace.pdb
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.exe
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.pdb
+C:\Users\Mihai Constantin\Documents\GitHub\H.A.M\HamSpace\HamSpace\obj\x86\Debug\HamSpace.AboutBox1.resources
