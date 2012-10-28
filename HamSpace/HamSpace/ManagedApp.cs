@@ -8,8 +8,8 @@ namespace HamSpace
 {
     public class HamUtils
     {
-        public static const string DECOY_NAME = "!";
-        public static const string LOCKED_NAME = "!!";
+        public const string DECOY_NAME = "!";
+        public const string LOCKED_NAME = "!!";
     }
 
     public class NotHamManageableException : Exception
@@ -21,11 +21,13 @@ namespace HamSpace
     }
     public class ManagedApp : IDisposable
     {
+        private string installPathDecoy;
+        private string installPathLocked;
         FileSystemWatcher fileDecoyWatch;
         FileStream fs;
         public ManagedApp(string installPath)
         {
-            string installPathDecoy = Path.Combine(installPath, HamUtils.DECOY_NAME);
+            installPathDecoy = Path.Combine(installPath, HamUtils.DECOY_NAME);
             string installPathLocked = Path.Combine(installPath, HamUtils.LOCKED_NAME);
 
             if (!File.Exists(installPathDecoy))
@@ -43,7 +45,11 @@ namespace HamSpace
 
         void fileDecoyWatch_Deleted(object sender, FileSystemEventArgs e)
         {
-            throw new NotImplementedException();
+            if (!File.Exists(installPathDecoy))
+            {
+                FileStream decoyFS = File.Create(installPathDecoy);
+                this.fileDecoyWatch = new FileSystemWatcher(installPathDecoy);
+            }
         }
 
         public void Dispose()
@@ -54,7 +60,9 @@ namespace HamSpace
 
         protected virtual void Dispose(bool disposing)
         {
-            throw new NotImplementedException();
+            fs.Close();
+            File.Delete(installPathDecoy);
+            File.Delete(installPathLocked);
         }
         
     }

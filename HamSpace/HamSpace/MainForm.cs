@@ -134,5 +134,11 @@ namespace HamSpace
                 Process.Start(appCont.link);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProgramFinder programFinder = new ProgramFinder();
+            programFinder.StartSearch();
+        }
     }
 }

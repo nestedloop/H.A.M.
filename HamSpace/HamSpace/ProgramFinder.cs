@@ -34,9 +34,9 @@ namespace HamSpace
             }
         }
 
-        HashSet<string> programsList = new HashSet<string>();
-        HashSet<string> installList = new HashSet<string>();
-        HashSet<string> uninstallList = new HashSet<string>();
+        public HashSet<string> programsList = new HashSet<string>();
+        public HashSet<string> installList = new HashSet<string>();
+        public HashSet<string> uninstallList = new HashSet<string>();
 
         Hashtable programTable = new Hashtable();
         private void AddToArray(object program, object install, object uninstall)
@@ -48,14 +48,22 @@ namespace HamSpace
             //programTable.Add(program as string, install as string);
         }
 
-        private void StartSearch()
+        public bool StartSearch()
         {
-            String uninst = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
-            RegistryKey r = Registry.LocalMachine.OpenSubKey(uninst);
-            SearchForPrograms(Registry.CurrentUser.OpenSubKey("Software"));
-            SearchForPrograms(Registry.LocalMachine.OpenSubKey("SOFTWARE"));
-            SearchForPrograms(r);
-            return;
+            try
+            {
+                String uninst = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+                RegistryKey r = Registry.LocalMachine.OpenSubKey(uninst);
+                SearchForPrograms(Registry.CurrentUser.OpenSubKey("Software"));
+                SearchForPrograms(Registry.LocalMachine.OpenSubKey("SOFTWARE"));
+                SearchForPrograms(r);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            
+            return true;
         }
     }
 }
