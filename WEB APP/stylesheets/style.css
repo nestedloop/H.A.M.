@@ -1,0 +1,135 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+	padding:0;
+}
+h1 { font-size: 27px; margin: 6px 0px; }
+li {
+	list-style:none;
+}
+
+body {
+	background-color:#c3c3c3;
+}
+
+
+.blueish	{color: #0954E8;	}
+
+.bold	{	font-weight:	600;	}
+
+.text
+{	font-family:	'Century Gothic';	
+	text-decoration:none;
+	margin-left:200px;
+}
+
+.menu
+{	width:			800px;
+	height:			23px;
+	margin:			0 auto;
+	margin-top: 	10px;
+	margin-bottom:	26px;
+}
+.menu  li
+{	padding:	0px 6px;
+	margin:		5px 12px;
+	float: 		left;
+}
+.menu li a
+{	font-family:	'Century Gothic';	
+	text-decoration:none;
+	font-size:		16px;
+	color:			#44f;
+}
+.menu li a:hover
+{	color:			#000;
+}
+.active		{background-color:	#FFF;}
+
+.formbox { position: relative; color: black; left:200px; top:50px; width: 500px; }
+.formbox input
+{	width:	327px;
+	height:		24px;
+	line-height:20px;
+	padding:	2px 8px;
+	border:	1px solid #A0A0A0;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-bottom: 6px;
+	
+	font-family:'Century Gothic';
+	font-size:	12px;
+}
+.formbox li > span, .formbox > span { display: block; width:150px; float: left}
+	
+.formbox textarea
+{	width:	327px;
+	height:		204px;
+	line-height:20px;
+	padding:	2px 8px;
+	border:	1px solid #A0A0A0;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-bottom: 6px;
+	
+	font-family:'Century Gothic';
+	font-size:	12px;
+}
+.formbox .f_submit, .formbox .f_submit_with_textarea
+{	width: 120px;
+	height:40px;
+}
+.formbox .f_submit:hover , 
+.formbox .f_submit_with_textarea:hover { background-color: #FFCA13; }
+
+.std_button
+ {	min-width: 150px; height:22px;
+	line-height: 22px;
+	border: 1px solid #A0A0A0;
+	padding: 4px 8px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 4px 6px 4px 0px; 
+	text-align: center; 
+	background-color: #F0F0F0;
+	text-decoration: none;
+	color: black; display: block;
+	float: left;
+	cursor: pointer;
+}
+.std_button:hover { background-color: #FFCA13; }
+
+ul > a { color: black; display: block; text-decoration: none;  padding: 12px; margin: 6px 0px; }
+p > span { display:inline-block; width: 150px; color: #0954E8; }
+ul > a > li > h2 {  }
+p > a { text-decoration: none; color: #0954E8; }
+ul.admin_list { font-size:130%; margin-top:80px;}
+ul.admin_list li { margin: 8px 0px; padding-left: 180px; }
+ul.admin_list li:hover { background-color: #FFF69F;}
+ul.admin_list a { text-decoration: none; color: black }
+ul.admin_list a p span { color: #0954E8; }
+ul.admin_list li p span.del { color: #552222;}
+ul.admin_list li p span.del:hover { color: #ff2222; cursor:pointer; }
