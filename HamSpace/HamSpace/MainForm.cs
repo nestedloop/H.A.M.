@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Xml;
 using System.IO;
+using System.Diagnostics;
 
 namespace HamSpace
 {
@@ -108,8 +109,30 @@ namespace HamSpace
             ListViewItem appItem = new ListViewItem(appCont.name);
             appItem.SubItems.Add(appCont.descShort);
             appItem.ImageKey = appCont.appId;
-
+            appItem.Tag = appCont;
             installAppslistView.Items.Add(appItem);
+
+            
+        }
+
+        private void installAppslistView_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (installAppslistView.FocusedItem.Bounds.Contains(e.Location) == true)
+                {
+                    appInstallMenuStrip.Show(Cursor.Position);
+                }
+            } 
+        }
+
+        private void installToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (installAppslistView.FocusedItem != null)
+            {
+                AppContainer appCont = installAppslistView.FocusedItem.Tag as AppContainer;
+                Process.Start(appCont.link);
+            }
         }
     }
 }

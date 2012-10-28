@@ -43,9 +43,13 @@
             this.appNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.descriptionHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.appInstallMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.installToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visitWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.appInstallMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -148,6 +152,7 @@
             this.installAppslistView.TabIndex = 0;
             this.installAppslistView.UseCompatibleStateImageBehavior = false;
             this.installAppslistView.View = System.Windows.Forms.View.Details;
+            this.installAppslistView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.installAppslistView_MouseClick);
             // 
             // appNameHeader
             // 
@@ -166,6 +171,27 @@
             this.imageList.Images.SetKeyName(0, "duck2.png");
             this.imageList.Images.SetKeyName(1, "paun2.jpg");
             // 
+            // appInstallMenuStrip
+            // 
+            this.appInstallMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.installToolStripMenuItem,
+            this.visitWebsiteToolStripMenuItem});
+            this.appInstallMenuStrip.Name = "appInstallMenuStrip";
+            this.appInstallMenuStrip.Size = new System.Drawing.Size(153, 70);
+            // 
+            // installToolStripMenuItem
+            // 
+            this.installToolStripMenuItem.Name = "installToolStripMenuItem";
+            this.installToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.installToolStripMenuItem.Text = "Install";
+            this.installToolStripMenuItem.Click += new System.EventHandler(this.installToolStripMenuItem_Click);
+            // 
+            // visitWebsiteToolStripMenuItem
+            // 
+            this.visitWebsiteToolStripMenuItem.Name = "visitWebsiteToolStripMenuItem";
+            this.visitWebsiteToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.visitWebsiteToolStripMenuItem.Text = "Visit website";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +204,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.appInstallMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -197,5 +224,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader appNameHeader;
         private System.Windows.Forms.ColumnHeader descriptionHeader;
+        private System.Windows.Forms.ContextMenuStrip appInstallMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem installToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visitWebsiteToolStripMenuItem;
     }
 }

@@ -60,6 +60,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramFinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilContainers.cs" />
     <EmbeddedResource Include="MainForm.resx">
